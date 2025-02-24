@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #2563eb;
+  --color-background: #f8fafc;
+  --color-card: #ffffff;
+  --color-text: #1e293b;
+  --color-textSecondary: #64748b;
+  --color-border: #e2e8f0;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+/* Apply theme colors */
+.bg-primary { background-color: var(--color-primary); }
+.text-primary { color: var(--color-primary); }
+.border-primary { border-color: var(--color-primary); }
+
+.bg-card { background-color: var(--color-card); }
+.text-secondary { color: var(--color-textSecondary); }
+.border-default { border-color: var(--color-border); }
+
+/* Dark mode overrides */
+.dark .bg-card {
+  background-color: var(--color-card);
+}
+
+.dark .border-default {
+  border-color: var(--color-border);
+}
+
+/* Fix card backgrounds in dark mode */
+.dark .bg-white {
+  background-color: var(--color-card);
+}
+
+/* Ensure proper text contrast in dark mode */
+.dark .text-gray-600 {
+  color: var(--color-textSecondary);
+}
